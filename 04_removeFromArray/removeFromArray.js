@@ -18,8 +18,11 @@ const removeFromArray = function(array, ...args) {
     const lotsofArguments = [...args]; // spread operator
     for (let i =0; i < array.length; i++){
         for(let z = 0; z < lotsofArguments.length; z++) {
-        if ( array [i] === lotsofArguments[z] ){
-            array.splice(z, 1);
+        if ( array [i] === lotsofArguments[z]  ){
+            array.splice(array.indexOf(lotsofArguments[z]), 1);
+        }
+            if (array.toString(array[i]) === lotsofArguments[z]) {
+                array.splice(array.indexOf(lotsofArguments[z]), 1);
             }
         }
     }   
