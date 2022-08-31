@@ -20,12 +20,12 @@ const removeFromArray = function(array, ...args) {
         for(let z = 0; z < lotsofArguments.length; z++) {
         if ( array [i] === lotsofArguments[z]  ){
             array.splice(array.indexOf(lotsofArguments[z]), 1);
-        }
-            if (array.toString(array[i]) === lotsofArguments[z]) {
-                array.splice(array.indexOf(lotsofArguments[z]), 1);
-            }
-        }
-    }   
+            i--;
+         }
+            
+        }   
+        
+    }
     return array;
 };
 
