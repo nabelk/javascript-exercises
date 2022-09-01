@@ -1,17 +1,29 @@
 const sumAll = function(x, y) {
+    let result;
     let sum = 0;
-    if (y > x){
+    
+    
+
+    /* if(x < 0 || y === "90" ){
+    result = "ERROR";
+    } */
+   
+    if (x < 0 || y === "90"   ){
+        result  = "ERROR";
+    } else if (y > x){
     for (let i = x; i <= y; i++ ){
         sum += i;
-    }
-} else{
+        result = sum;
+        }
+    } else {
     if (x > y){
         for (let i = y; i <= x; i++ ){
             sum += i;
+            result = sum;
+            }
         }
     }
-}
-    return sum;  
+    return result;    
 }
 
 // Do not edit below this line
