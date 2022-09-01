@@ -2,13 +2,11 @@ const sumAll = function(x, y) {
     let result;
     let sum = 0;
     
-    
-
     /* if(x < 0 || y === "90" ){
     result = "ERROR";
     } */
    
-    if (x < 0 || y === "90"   ){
+    if (x < 0 || typeof y === "string" || typeof y === "object"){
         result  = "ERROR";
     } else if (y > x){
     for (let i = x; i <= y; i++ ){
