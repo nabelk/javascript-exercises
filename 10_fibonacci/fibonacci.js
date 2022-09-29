@@ -2,7 +2,10 @@ const fibonacci = function(indexNum) {
     let a = 0; // 1st index of fibonacci
     let b = 1; // 2nd index of fibonacci
     let c = null;
-    console.log(`Index number = ${c}`);
+    if (typeof indexNum !== "number") indexNum = Number(indexNum);
+    if (indexNum === 1) return b;
+    if (indexNum < 0) return "OOPS"; 
+    console.log(`Index number = ${indexNum}`);
 
     for (let i = 2; i <= indexNum; i++ ){
        console.log(`Round of loop: ${i}`)
@@ -17,7 +20,6 @@ const fibonacci = function(indexNum) {
     console.log (`result: ${c}`);
     return c;
 };
-
 
 // Do not edit below this line
 module.exports = fibonacci;
